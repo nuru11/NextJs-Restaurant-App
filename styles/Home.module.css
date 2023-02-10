@@ -259,6 +259,12 @@
   margin-left: 10px;
 }
 
+/* ============ independent header ========= */
+
+.independentHeader{
+  background-color: rosybrown;
+}
+
 /* =========== background-img ======= */
 
 .BackgroundImg{
@@ -266,6 +272,36 @@
   background-size: cover;
   height: 100vh;
 }
+
+.BackgroundImgText{
+  color: white;
+  border: 1px solid transparent;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.BackgroundImgTextH2:before{
+  content: '';
+  left: 110%;
+  width: 120%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent 0%, #000 5%, #000 100%);
+  animation: animate 5.5s linear forwards;
+}
+/*
+@keyframes animate
+{
+  0%
+  {
+    left: 110%
+  }
+  100%
+  {
+    left: 20%
+  }
+}*/
 
 /* =========== popular-paltes =======*/
 .PopularPlatesParent{
@@ -381,13 +417,12 @@
 .Review{
   background-color: RosyBrown;
   border: 1px solid RosyBrown;
-  counter-reset: nuru-counter 0;
 }
 
 .ReviewTitle{
   color: white;
+  margin-left: 35%;
   font-size: xx-large;
-  margin-left: 35%
 }
 
 .ReviewItemsParent{
@@ -401,15 +436,20 @@
 }
 
 .ReviewItems{
-  background-color: #92a8d1;
+ /* background-color: #92a8d1;*/
+ background-color: rgb(31, 18, 18);
   opacity:0.6;
-  border-radius: 10px;
+  border-radius: 5px;
   width: 100px;
+  border: 5px solid;
+  border-color: transparent transparent rgb(255, 115, 0) transparent;
+
 }
 
 .ItemTitle{
+  font-size: x-small;
   font-weight: bolder;
-  color:white;
+  color:rgb(255, 115, 0);
   margin-left: 10px;
 }
 
@@ -420,34 +460,545 @@
   margin-bottom: 5px;
 }
 
-.spann{
-  background-color: red;
-  color: white;
-  animation-name: change-color;
-  animation-duration: 5s;
-  transition: width 2s;
-  transition-delay: 2s;
-}
+/* ================== Footer ====================== */
 
-.spann2::after{
-  counter-increment: nuru-counter;
- /* content: counter(nuru-counter);*/
- /* transition: nuru-counter 4s;*/
+.footer{
+  background-color: black;
+  border: 1px solid black;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  color: white;
   
 }
 
-@keyframes change-color {
-  from {
-    background-color: red;
-    color: white
-  }
-  to {
-    background-color: white;
-    color:red
-  }
+.footerItemsParent{
+ 
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+  margin-left: 70px;
+  position: relative;
 }
 
-.spann2{
-  background-color: aqua;
-  content:223;
+.footerServicesItemsParent{
+  border: 1px solid transparent;
+}
+
+.footerServicesTitle{
+  background-color: transparent;
+  padding-left: 30px;
+  font-size: xx-large;
+}
+
+.footerItemsUl{
+  list-style: none;
+}
+
+.footerItemsUl li{
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.footerMessageUs{
+  border: 1px solid transparent;
+  margin-left: 80px;
+  display: flex;
+  flex-direction: column;
+}
+
+.footerMessageUsTitle{
+  font-size: x-large;
+}
+
+.footerMessageUsInput{
+  width: 250px;
+  height: 50px;
+  border-radius: 5px;
+}
+
+.footerMessageUsButton{
+  background-color: #0070f3;
+  width: 250px;
+  margin-top: 5px;
+  color: white;
+  font-size: xx-large;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.footerMessageUsButton:hover{
+  opacity: 0.8;
+}
+
+.footerAuthentication{
+  margin-left: 300px;
+}
+
+.footerAuthenticationLogin{
+  background-color: green;
+  color: white;
+  width: 150px;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  padding-left: 50px;
+ 
+}
+
+.footerAuthenticationSignup{
+  padding-left: 50px;
+  background-color: #0070f3;
+  color: white;
+  width: 150px;
+  border-radius: 10px;
+}
+
+.footerAuthenticationLink{
+  text-decoration: none;
+}
+
+/* ================= menu =============== */
+
+.pageMenu{
+  background-color: rosybrown;
+  display: flex;
+  gap: 100px;
+  overflow-x: scroll;
+}
+
+.menu{
+  border: 1px solid transparent;
+  background-color: rosybrown;
+  width: fit-content;
+  min-height: fit-content;
+  margin-bottom: 20px;
+  margin-top: 20px;
+
+}
+
+.menuMainLink{
+  text-decoration: none;
+  height: fit-content;
+}
+
+.menuImageParent{
+  border: 5px solid transparent
+}
+
+.menuItemsParent{
+  color: white;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menuButton{
+  width: 70%;
+  height: 30px;
+  margin-top: 20px;
+  margin-left: 50px;
+  background-color: yellow;
+  font-size: larger;
+  border-color: transparent;
+  border-radius: 5px;
+  cursor: pointer
+  
+}
+
+
+.pageMenu::-webkit-scrollbar{
+  width: 1rem;
+}
+
+.pageMenu::-webkit-scrollbar-track{
+  background: rhl(120 75% 50% / 1);
+  background-color: rgb(67, 64, 64);
+  border-radius: 100vw;
+  margin-block: .5em
+}
+
+.pageMenu::-webkit-scrollbar-thumb{
+  background: htl(120 100% 20% / 1);
+  background-color: yellow;
+  border-radius: 100vw;
+ 
+}
+
+.pageMenu::-webkit-scrollbar{
+  width: 1rem;
+}
+
+
+.pageMenu::-webkit-scrollbar-thumb:hover{
+  background-color: rgb(127, 127, 24);
+}
+
+
+/* =============== plateDetail ================= */
+.plateDetailNotFoundParent{
+  height: 425px;
+}
+.plateDetailNotFound{
+  color: red;
+  font-size: xx-large;
+  font-weight: 900;
+  margin-left: 10px;
+
+}
+
+.plateDetailNotFoundLink{
+  margin-left: 10px;
+}
+
+.plateDetailItemsParent{
+  display: flex;
+}
+
+.plateDetailImageParent{
+  width: fit-content;
+  height: 600px;
+}
+.plateDetailImage{
+  height: 100%;
+}
+
+.plateDetailItem{
+  border: 2px solid rosybrown;
+  padding-top: 20px;
+  padding-left: 10px;
+  width: 100%;
+  background-color:rosybrown;
+  color: white;
+  font-weight: bolder;
+}
+
+.plateDetailDescription{
+  border: 1px solid rosybrown;
+  width: 300px;
+  margin-top: 20px
+}
+
+.plateDetailButton{
+  background-color: royalblue;
+  color: white;
+  border-color: transparent;
+  border-radius: 10px;
+  height: fit-content;
+  width: fit-content;
+  margin-top: 20px;
+  width: 300px;
+  cursor: pointer;
+  font-weight: bolder;
+}
+
+.plateDetailButton:hover{
+  opacity: 0.7;
+}
+
+/* ================= pagesCart ===================== */
+
+.pagesCart{
+  background-color: rosybrown;
+ position: relative;
+}
+.pagesCartBody{
+  background-color: rosybrown;
+  margin-top: 50px;
+  position: relative;
+  min-height: 367px;
+}
+
+.pagesCartFooter{
+  bottom: 0;
+  width: 100%;
+  
+}
+
+.pagesCartCheckout{
+  position: fixed;
+  background-color: rgb(127, 95, 95);
+  border-radius: 10px;
+  width: 300px;
+  height: 200px;
+  right: 10px;
+  top: 50px;
+}
+
+.pagesCartCheckoutTitle{
+  color: white;
+  border: 2px solid transparent;
+  border-bottom-color: black;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: bolder;
+  font-size: xx-large;
+}
+
+.pagesCartCheckoutTotal{
+  color: white;
+  border: 2px solid transparent;
+  border-bottom-color: black;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: bolder;
+  margin-top: 10px
+}
+
+.pagesCartCheckoutbtn{
+  background-color: royalblue;
+  width: 80%;
+  height: 30px;
+  margin-left: 29px;
+  margin-top: 80px;
+  color: white;
+  border-radius: 10px;
+  border-color: transparent;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.pagesCartCheckoutbtn:hover{
+  background-color: rgb(28, 51, 117);
+}
+
+
+/* =============== componentCart ============= */
+/*
+.componentCart{
+ 
+}*/
+.componentCartUl{
+  list-style-type: none;
+  border: 5px solid transparent;
+  border-bottom-color: black;
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 20px;
+  height: fit-content;
+}
+
+
+.componentCartLiImage{
+  border: 3px solid yellow;
+  border-radius: 50%;
+}
+
+.componentCartulText{
+  margin-top: 10px;
+  height: fit-content;
+  font-weight: bolder;
+}
+
+/* ============== checkout ============== */
+
+.pagesCheckoutBody{
+  background-color: rosybrown;
+  min-height: 417px;
+}
+
+.componentCheckoutForm{
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background-color: rgb(122, 91, 91);
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+ height: fit-content;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  justify-content: space-between;
+}
+
+.checkoutComponent{
+  display: flex;
+  justify-content: center;
+}
+
+.checkoutComponentFormButton{
+  background-color: royalblue;
+  color: white;
+  width: 60%;
+  height: 30px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  margin-left: 20%;
+  margin-bottom: 20px;
+  font-weight: bolder;
+  font-size: large;
+}
+
+.checkoutComponentFormInput{
+  width: 90%;
+  margin-left: 10px;
+ height: 30px;
+ border: 1px solid transparent;
+ border-radius: 10px;
+ background-color: rgb(228, 183, 183);
+}
+
+.checkoutComponentFormText{
+  margin-left: 10px;
+  font-size: larger;
+  font-weight: bold;
+  color: white
+}
+
+.componentCheckoutFormTitle{
+  margin-left: 30%;
+  font-size: xx-large;
+  font-weight: bolder;
+  color: white;
+}
+
+.checkoutComponentFormRadioTitle{
+  color: white;
+  font-weight: bolder;
+  margin-left: 20px;
+}
+
+.checkoutComponentFormRadioLebel{
+  color: white;
+  font-weight: bold;
+ 
+}
+
+/* */
+/*
+.componentCartModal{
+ 
+}*/
+/*
+.componentCartModalIcon{
+  position: absolute;
+  margin-bottom: 200px;
+}*/
+
+
+/* ================= place order ===================== */
+
+.placeOrderPageBody{
+  background-color: rosybrown;
+  height: 430px;
+}
+
+.placeOrderComponent{
+ 
+  display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+  
+}
+
+.placeOrderComponentParent{
+  width: fit-content;
+  display: flex;
+  align-items: flex-end;
+ 
+}
+
+.placeOrderComponentTitle{
+  color: white;
+  font-size: xx-large;
+  font-weight: bold;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.placeOrderComponentInfo{
+  border: 5px solid transparent
+}
+
+.placeOrderComponentInfoUl{
+  list-style-type: none;
+ padding-left: 10px;
+}
+
+.placeOrderComponentInfoUl li{
+  color: white;
+  font-size: xx-large;
+  font-weight: bolder;
+  background-color: rgb(109, 78, 78);
+  border-radius: 5px;
+  margin-top: 10px;
+  padding-left: 5px;
+}
+
+.placeOrderComponentItemsTitls{
+  font-size: xx-large;
+  font-weight: bolder;
+  color: white;
+  margin-left: 30px;
+}
+
+.placeOrderComponentItems{
+  width: 600px;
+}
+
+.placeOrderComponentItemsUl{
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color:  rgb(109, 78, 78);
+  border-radius: 10px;
+  margin-left: 20px;
+}
+
+.placeOrderComponentItemsImage{
+  border: 2px solid yellow;
+  border-radius: 20px;
+}
+
+.pagesPlaceOrderCheckout{
+  position: fixed;
+  background-color: rgb(127, 95, 95);
+  border-radius: 10px;
+  width: 300px;
+  height: 200px;
+  right: 10px;
+  top: 50px;
+}
+
+.pagesPlaceOrderCheckoutTitle{
+  color: white;
+  border: 2px solid transparent;
+  border-bottom-color: black;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: bolder;
+  font-size: xx-large;
+}
+
+.pagesPlaceOrderCheckoutTotal{
+  color: white;
+  border: 2px solid transparent;
+  border-bottom-color: black;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: bolder;
+  margin-top: 10px
+}
+
+.pagesPlaceOrderCheckoutbtn{
+  background-color: royalblue;
+  width: 80%;
+  height: 30px;
+  margin-left: 29px;
+  margin-top: 80px;
+  color: white;
+  border-radius: 10px;
+  border-color: transparent;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.pagesPlaceOrderCheckoutbtn:hover{
+  background-color: rgb(28, 51, 117);
 }

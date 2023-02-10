@@ -1,10 +1,12 @@
 import React from 'react'
-import styles from "../styles/Home.module.css"
+import Styles from "../styles/Home.module.css"
 
 const BackgroundImg = () => {
   return (
-    <div className={styles.BackgroundImg}>
-        <div> </div>
+    <div className={Styles.BackgroundImg}>
+        <div className={Styles.BackgroundImgText}>
+           <div className={Styles.BackgroundImgTextH2}> hello from hq</div>
+            </div>
     </div>
   )
 }

@@ -1,22 +1,12 @@
-import Head from 'next/head';
-import Link from 'next/link';
-import React from 'react';
-import styles from "../styles/Home.module.css"
+import React from 'react'
+import Link from "next/link"
 import {BsCartCheck} from "react-icons/bs"
-import Footer from "./Footer"
+import styles from "../styles/Home.module.css"
 
-export default function Layout({ title, children }) {
+function Header() {
   return (
-    <>
-      <Head>
-        <title>{title ? title + ' - Amazona' : 'Amazona'}</title>
-        <meta name="description" content="Ecommerce Website" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <div >
-        <header className={styles.header}>
-        <nav >
+    <div className={styles.independentHeader}>
+        <nav>
           
           <div className={styles.headerItemParent}>
             <div className={styles.firstItemParent}>
@@ -42,17 +32,17 @@ export default function Layout({ title, children }) {
 
             <div className={styles.lastItemParent}>
                <div>sign up <span className={styles.hiddenText}>, login, or user name</span></div>
-               <div><BsCartCheck /></div>
+               <div>
+                <Link href="/cart">
+                <BsCartCheck />
+                </Link>
+                </div>
             </div>
            
           </div>
         </nav>
-      </header>
-        <main className="container m-auto mt-4 px-4">{children}</main>
-        <footer className="flex h-10 justify-center items-center shadow-inner">
-          <Footer />
-        </footer>
-      </div>
-    </>
-  );
+    </div>
+  )
 }
+
+export default Header
