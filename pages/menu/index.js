@@ -3,14 +3,15 @@ import Menu from "../../components/Menu"
 import data from "../../data/data"
 import Layout from "../../components/Layout"
 import Background from "../../components/Background-img"
+import MenuBackgroun from "../../components/MenuBackgroun-img"
 import Style from "../../styles/Home.module.css"
 
 function menu() {
  
   return (
-    <div>
+    <div className={Style.menuPageParent}>
       <Layout>
-        <Background />
+        <MenuBackgroun />
         <div className={Style.pageMenu}>
      {
       data.plates.map((plate)=>(
@@ -18,7 +19,11 @@ function menu() {
       ))
      } 
      </div>
-     </Layout>
+
+   
+      </Layout>
+    
+    
     </div>
   )
 }

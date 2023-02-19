@@ -3,13 +3,14 @@ import { useRouter } from 'next/router'
 import Style from "../styles/Home.module.css"
 import { useDispatch} from "react-redux"
 import {checkoutInfo} from "../store/checkoutInfoSlice"
-
+import {useSession} from "next-auth/react"
 
 
 function Checkout() {
+  const {data: session, status} = useSession()
   const route = useRouter()
 
-  const [name, setName] = useState("nuru")
+  const [name, setName] = useState()
   const [email, setEmail] = useState("nuru@gmail.com")
   const [phone, setPhone] = useState("0966202667")
   const [address, setAddress] = useState("kolfe")
@@ -20,7 +21,6 @@ function Checkout() {
   const [paymentMethod, setPaymentMethod] = useState("telebirr")
 
   const dispatch = useDispatch()
- // const checkoutInfoI = useSelector((state) => state.checkoutInfo.checkoutInfoItem)
 
 
   const checkoutInfoHandler = () => {
@@ -173,7 +173,7 @@ function Checkout() {
 
    
 
-      <button onClick={checkoutInfoHandler} className={Style.checkoutComponentFormButton}>submit</button>
+      <button onClick={checkoutInfoHandler} className={Style.checkoutComponentFormButton}>continue</button>
     </div>
     </div>
   )

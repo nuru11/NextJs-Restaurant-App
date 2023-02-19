@@ -1,29 +1,31 @@
 import React from 'react'
-import Styles from "../styles/Home.module.css"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
-import Checkout from "../components/Checkout"
-import styles from "../styles/Home.module.css"
+import LoginComponent from "../components/Login"
+import Style from "../styles/Home.module.css"
 import { Sidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
 import {BsCartCheck} from "react-icons/bs"
-import {useSession} from "next-auth/react"
 import Link from "next/link"
+import styles from "../styles/Home.module.css"
+import {useSession} from "next-auth/react"
 
-function checkout() {
-  
+
+function Login() {
   const {data: session, status} = useSession()
-  
 
+   
   return (
-    <div> 
-      <div className={Styles.checkoutPageHeader}>
-        <Header />
-      </div>
+    
+     <div className={Style.loginPage}>
+     
+      <div className={Style.loginPageHeader}>
+      <Header />
+      </div> 
 
-      <div className={Styles.checkoutComponentDropdownMediaQuery}>
+      <div className={Style.loginPageDropdownMediaQuery}>
 
-          
-{status === 'loading' ? (
+    
+      {status === 'loading' ? (
                 'Loading...'
               ) : session?.user ? (
                 <div className={styles.layoutHeaderSidebarPlateDetailParentMediaQuery}>
@@ -33,7 +35,7 @@ function checkout() {
     <SubMenu label={session.user.name} className={styles.layoutHeaderSubMenu}>
       <MenuItem className={styles.layoutHeaderMenuItem}><Link className={styles.layoutSidebarLink} href="/menu">menu</Link>  </MenuItem>
     <MenuItem className={styles.layoutHeaderMenuItem}> <Link className={styles.layoutSidebarLink} href="/cart">cart</Link> </MenuItem>
-    {session.user.isAdmin &&<MenuItem className={styles.layoutHeaderMenuItem}> <Link className={styles.layoutSidebarLink} href="/dashboard">dashboard</Link> </MenuItem>}
+    {session.user.isAdmin &&<MenuItem className={styles.layoutHeaderMenuItem}> <Link className={styles.layoutSidebarLink} href="/Dashboard">dashboard</Link> </MenuItem>}
     <MenuItem className={styles.layoutHeaderMenuItem} onClick={(e) =>{ e.preventDefault() 
                 signOut()}}> logOut </MenuItem>
     </SubMenu>
@@ -53,16 +55,21 @@ function checkout() {
               </Link>
               </div>
               )}
-       </div>
-      <div className={Styles.pagesCheckoutBody}>
-      <Checkout />
+  
+   
+
+
       </div>
-    
-      <div className={Styles.checkoutPageFooter}>
+
+      <div className={Style.loginPageBody}>
+        <LoginComponent />
+      </div>
+
+      <div className={Style.loginpageFooter}></div>
         <Footer />
-      </div>
-    </div>
+     </div>
+    
   )
 }
 
-export default checkout
+export default Login

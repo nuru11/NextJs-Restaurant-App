@@ -9,13 +9,12 @@ const initialState = {
 
 
 
-const placeOrderSlice = createSlice({ 
+const placeOrderSlice = createSlice({  
     name: "placeOrderName",  
     initialState,
     reducers: {
         placeOrderAction: (state, action) => {
-      //  state.placeOrderArray = []
-      //  state.placeOrderArray = action.payload.length > 0 ? state.placeOrderArray.push(action.payload) : state.placeOrderArray
+      
       state.placeOrderArray = [action.payload]
         Cookies.set("placeOrderCookies", JSON.stringify(state.placeOrderArray))      
         },

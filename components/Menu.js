@@ -24,7 +24,7 @@ function Menu({plateData}) {
    
         <Link href={`/menu/${plateData.id}`}  className={Style.menuMainLink}>
            <div className={Style.menuImageParent}>
-            <Image src={plateData.image} alt={plateData.name} width={250} height={250}></Image>
+            <Image className={Style.menuImage} src={plateData.image} alt={plateData.name} width={250} height={250}></Image>
            </div> 
 
            <div className={Style.menuItemsParent}>

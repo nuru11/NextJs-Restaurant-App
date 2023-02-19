@@ -5,7 +5,7 @@ const BackgroundImg = () => {
   return (
     <div className={Styles.BackgroundImg}>
         <div className={Styles.BackgroundImgText}>
-           <div className={Styles.BackgroundImgTextH2}> hello from hq</div>
+           <div className={Styles.BackgroundImgTextH2}> Life is short, make it sweet</div>
             </div>
     </div>
   )

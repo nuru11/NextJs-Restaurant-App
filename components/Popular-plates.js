@@ -4,11 +4,7 @@ import Style from "../Styles/Home.module.css"
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
 
 import { Swiper, SwiperSlide } from "swiper/react";
-/*
-import "swiper/swiper.min.css";
-import "swiper/components/pagination/pagination.min.css"
-import "swiper/components/navigation/navigation.min.css"
-*/
+
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -17,22 +13,11 @@ import 'swiper/css/scrollbar';
 import 'swiper/css/autoplay'
 
 
-/*
-import SwiperCore, {
-    Autoplay,Pagination,Navigation
-  } from 'swiper/core';
-  
-
-  // install Swiper modules
-  SwiperCore.use([Autoplay,Pagination,Navigation]);
-  */
-
 
 function PopularPlates() {
   return (
     <div className={Style.PopularPlatesParent}>
       <Swiper
-      // install Swiper modules
       modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
      /* spaceBetween={50}
       slidesPerView={3}*/

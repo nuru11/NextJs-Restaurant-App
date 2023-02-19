@@ -1,29 +1,37 @@
 import React from 'react'
-import Styles from "../styles/Home.module.css"
+import { useRouter } from 'next/router';
 import Header from "../components/Header"
 import Footer from "../components/Footer"
-import Checkout from "../components/Checkout"
-import styles from "../styles/Home.module.css"
+import SignupComponent from '../components/SignUp';
+import Styles from "../styles/Home.module.css"
 import { Sidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
 import {BsCartCheck} from "react-icons/bs"
-import {useSession} from "next-auth/react"
 import Link from "next/link"
+import styles from "../styles/Home.module.css"
+import {useSession} from "next-auth/react"
 
-function checkout() {
-  
+function Signup() {
   const {data: session, status} = useSession()
-  
+  const router = useRouter()
+
+
+
+   /* if(status === "authenticated"){ 
+    router.push("/")
+    return
+    }*/
+
 
   return (
-    <div> 
-      <div className={Styles.checkoutPageHeader}>
-        <Header />
+    <div className={Styles.signupPage}>
+      
+      <div className={Styles.signupPageHeader}>
+          <Header /> 
       </div>
 
-      <div className={Styles.checkoutComponentDropdownMediaQuery}>
+      <div className={Styles.signupPageDropdownMediaQuery}>
 
-          
-{status === 'loading' ? (
+      {status === 'loading' ? (
                 'Loading...'
               ) : session?.user ? (
                 <div className={styles.layoutHeaderSidebarPlateDetailParentMediaQuery}>
@@ -33,7 +41,7 @@ function checkout() {
     <SubMenu label={session.user.name} className={styles.layoutHeaderSubMenu}>
       <MenuItem className={styles.layoutHeaderMenuItem}><Link className={styles.layoutSidebarLink} href="/menu">menu</Link>  </MenuItem>
     <MenuItem className={styles.layoutHeaderMenuItem}> <Link className={styles.layoutSidebarLink} href="/cart">cart</Link> </MenuItem>
-    {session.user.isAdmin &&<MenuItem className={styles.layoutHeaderMenuItem}> <Link className={styles.layoutSidebarLink} href="/dashboard">dashboard</Link> </MenuItem>}
+    {session.user.isAdmin &&<MenuItem className={styles.layoutHeaderMenuItem}> <Link className={styles.layoutSidebarLink} href="/Dashboard">dashboard</Link> </MenuItem>}
     <MenuItem className={styles.layoutHeaderMenuItem} onClick={(e) =>{ e.preventDefault() 
                 signOut()}}> logOut </MenuItem>
     </SubMenu>
@@ -53,16 +61,20 @@ function checkout() {
               </Link>
               </div>
               )}
-       </div>
-      <div className={Styles.pagesCheckoutBody}>
-      <Checkout />
+  
+
       </div>
-    
-      <div className={Styles.checkoutPageFooter}>
-        <Footer />
+
+      <div className={Styles.signupPageBody}>
+              <SignupComponent />
+      </div>
+
+      <div className={Styles.signupPageFooter}>
+         <Footer />
       </div>
     </div>
   )
 }
 
-export default checkout
+
+export default Signup
