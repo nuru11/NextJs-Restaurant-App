@@ -2,7 +2,7 @@ import React from 'react'
 import Menu from "../../components/Menu"
 import data from "../../data/data"
 import Layout from "../../components/Layout"
-import Background from "../../components/Background-img"
+//import Background from "../../components/Background-img"
 import MenuBackgroun from "../../components/MenuBackgroun-img"
 import Style from "../../styles/Home.module.css"
 

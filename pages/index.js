@@ -22,7 +22,3 @@ export default function Home() {
    )
 }
 
-
-/*
-"lint": "next lint"
-*/

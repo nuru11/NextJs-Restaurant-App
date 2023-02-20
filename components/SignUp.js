@@ -1,19 +1,19 @@
 import React from 'react'
 import {useForm} from "react-hook-form"
 import axios from 'axios';
-import {useSession} from "next-auth/react"
-import { useRouter } from 'next/router';
+/*import {useSession} from "next-auth/react"
+import { useRouter } from 'next/router';*/
 import Styles from "../styles/Home.module.css"
 import Link from "next/link"
 
 function Signup() {
-  const { status} = useSession()
-  const router = useRouter()
+ /* const { status} = useSession()
+  const router = useRouter()*/
 
     const {
         handleSubmit,
         register,
-        formState: { errors },
+      /*  formState: { errors },*/
       } = useForm();
 
       const submitHandler = async ({name, email, password, isAdmin}) => {
@@ -88,8 +88,9 @@ function Signup() {
             {...register('Confirmpassword', {
               required: 'Please confirm password',
               pattern: {
-                validate: (value) => value === getValues('password'),
-
+                minLength:  { value: 6, message: 'password must be greater than 6' }
+               /* validate: /*(value) => value === getValues('password')*/
+                
               }
             })}
             className={Styles.signupComponentFormInput}

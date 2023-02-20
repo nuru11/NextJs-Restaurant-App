@@ -7,7 +7,7 @@ import { deleteSlice } from '../store/addToCartSlice';
 import Modal from "react-modal";
 
 
-function placeOrder({items}) {
+function PlaceOrder({items}) {
   const [openModal, setOpenModal] = useState(false)
   const [imageModal, setImageModal] = useState()
 
@@ -96,4 +96,4 @@ function placeOrder({items}) {
   )
 }
 
-export default placeOrder
+export default PlaceOrder

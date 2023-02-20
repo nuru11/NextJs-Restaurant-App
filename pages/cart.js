@@ -2,17 +2,17 @@ import React from 'react'
 import Styles from "../styles/Home.module.css"
 import { useSelector } from 'react-redux'
 import {useRouter} from "next/router"
-import Cart from "../components/Cart"
+import CartComponent from "../components/Cart"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
 import dynamic from "next/dynamic"
-import {useSession} from "next-auth/react"
+import {useSession, signOut} from "next-auth/react"
 import { Sidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
 import {BsCartCheck} from "react-icons/bs"
 import Link from "next/link"
 import styles from "../styles/Home.module.css"
 
-function cart() {
+function Cart() {
   const {data: session, status} = useSession()
   const addCart = useSelector((state) => state.carts.cartItems)
  const router = useRouter()
@@ -69,7 +69,7 @@ function cart() {
    </div>
    <div className={Styles.pagesCartBody}>
     {addCart ? addCart.map((item) => (
-    <Cart key={item.id} items={item} />
+    <CartComponent key={item.id} items={item} />
    )): <div>there is no plate that added to the basket</div>}
 
    
@@ -100,4 +100,4 @@ function cart() {
   )
 }
 
-export default dynamic(() => Promise.resolve(cart), { ssr: false });
+export default dynamic(() => Promise.resolve(Cart), { ssr: false });

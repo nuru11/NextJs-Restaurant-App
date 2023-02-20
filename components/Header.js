@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import Link from "next/link"
 import {BsCartCheck} from "react-icons/bs"
 import styles from "../styles/Home.module.css"
@@ -11,12 +11,7 @@ import { Sidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
 function Header() {
   const { data: session, status } = useSession()
 
-  const [showItem, setShowItem] = useState(true)
-
-  const handleShowItem = () => {
-    setShowItem(pre => !pre)
-  }
-
+  
   return (
     <div className={styles.independentHeader}> 
         <nav>

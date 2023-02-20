@@ -14,7 +14,7 @@ import { Sidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
 import {BsCartCheck} from "react-icons/bs"
 
 
-function plateDetail() {
+function PlateDetail() {
   const { data: session, status } = useSession()
 
  const router = useRouter()
@@ -111,4 +111,4 @@ function plateDetail() {
 }
 }
 
-export default plateDetail
+export default PlateDetail

@@ -3,11 +3,11 @@ import { useRouter } from 'next/router'
 import Style from "../styles/Home.module.css"
 import { useDispatch} from "react-redux"
 import {checkoutInfo} from "../store/checkoutInfoSlice"
-import {useSession} from "next-auth/react"
+//import {useSession} from "next-auth/react"
 
 
 function Checkout() {
-  const {data: session, status} = useSession()
+  //const {data: session, status} = useSession()
   const route = useRouter()
 
   const [name, setName] = useState()

@@ -82,7 +82,7 @@ import Header from "../components/Header"
 import dynamic from 'next/dynamic'
 import { Sidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
 import {BsCartCheck} from "react-icons/bs"
-import {useSession} from "next-auth/react"
+import {useSession, signOut} from "next-auth/react"
 import Link from "next/link"
 import styles from "../styles/Home.module.css"
 

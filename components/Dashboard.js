@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import Styles from "../styles/Home.module.css"
 import { Line, Bar, Doughnut } from 'react-chartjs-2'
 import Chart from 'chart.js/auto';
@@ -6,6 +6,10 @@ import Chart from 'chart.js/auto';
 Chart.register(CategoryScale);*/
 
 function Dashboard() {
+
+    useEffect(() => (
+        window.Chart = Chart
+    ), [])
 
     /* ==================== Line ================== */
 

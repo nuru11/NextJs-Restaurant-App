@@ -6,15 +6,15 @@ import { useDispatch } from 'react-redux';
 import { deleteSlice } from '../store/addToCartSlice';
 import {ToastContainer} from "react-toastify"
 import Modal from "react-modal"
-import { signOut, useSession } from "next-auth/react"
-import styles from "../styles/Home.module.css"
-import Link from "next/link"
+//import { useSession } from "next-auth/react"
+/*import styles from "../styles/Home.module.css"
+import Link from "next/link"**/
 
 
 
 
 function Cart({items}) {
-  const { data: session, status } = useSession()
+//  const { data: session, status } = useSession()
 
   const [openModal, setOpenModal] = useState(false)
 

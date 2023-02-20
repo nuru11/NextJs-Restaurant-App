@@ -7,7 +7,7 @@ import { Sidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
 import {BsCartCheck} from "react-icons/bs"
 import Link from "next/link"
 import styles from "../styles/Home.module.css"
-import {useSession} from "next-auth/react"
+import {useSession, signOut} from "next-auth/react"
 
 
 function Login() {

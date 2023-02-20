@@ -4,6 +4,7 @@ import data from "../data/data"
 import { addToCart } from '../store/addToCartSlice'
 import {  useDispatch } from 'react-redux'
 import {ToastContainer} from "react-toastify"
+import Image from 'next/image'
 
 
 
@@ -23,7 +24,7 @@ function PopularFood() {
         <div className={Styles.popularFoodComponentItemsParent} >
         <a href={`/menu/${data.plates[0].id}`} className={Styles.popularFoodComponentLink}>
             <div className={Styles.popularFoodComponentImageParent}>
-        <img className={Styles.popularFoodComponentImage} src={data.plates[0].image} alt={data.plates[0].name} width={90} height={90} />
+        <Image className={Styles.popularFoodComponentImage} src={data.plates[0].image} alt={data.plates[0].name} width={90} height={90} />
             </div>
             </a>
             <ul className={Styles.popularFoodComponentItemsUl}>
@@ -40,7 +41,7 @@ function PopularFood() {
         <a href={`/menu/${data.plates[1].id}`} className={Styles.popularFoodComponentLink} >
 
             <div className={Styles.popularFoodComponentImageParent}>
-        <img className={Styles.popularFoodComponentImage} src={data.plates[1].image} alt={data.plates[1].name} width={90} height={90} />
+        <Image className={Styles.popularFoodComponentImage} src={data.plates[1].image} alt={data.plates[1].name} width={90} height={90} />
             </div>
             </a>
             <ul className={Styles.popularFoodComponentItemsUl}>
@@ -55,7 +56,7 @@ function PopularFood() {
         <div className={Styles.popularFoodComponentItemsParent}>
         <a href={`/menu/${data.plates[2].id}`} className={Styles.popularFoodComponentLink} >
             <div className={Styles.popularFoodComponentImageParent}>
-        <img className={Styles.popularFoodComponentImage} src={data.plates[2].image} alt={data.plates[2].name} width={90} height={90} />
+        <Image className={Styles.popularFoodComponentImage} src={data.plates[2].image} alt={data.plates[2].name} width={90} height={90} />
             </div>
             </a>
             <ul className={Styles.popularFoodComponentItemsUl}>

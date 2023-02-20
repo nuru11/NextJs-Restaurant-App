@@ -26,11 +26,12 @@ function Login() {
     const {
         handleSubmit,
         register,
-        formState: { errors },
+       /* formState: { errors },*/
       } = useForm();
 
       const submitHandler = async ({ email, password }) => {
       try {
+          // eslint-disable-next-line no-unused-vars
           const result = await signIn('credentials', {
             redirect: false,
             email,

@@ -1,5 +1,5 @@
 import React from 'react'
-import { useRouter } from 'next/router';
+//import { useRouter } from 'next/router';
 import Header from "../components/Header"
 import Footer from "../components/Footer"
 import SignupComponent from '../components/SignUp';
@@ -8,11 +8,11 @@ import { Sidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
 import {BsCartCheck} from "react-icons/bs"
 import Link from "next/link"
 import styles from "../styles/Home.module.css"
-import {useSession} from "next-auth/react"
+import {useSession, signOut} from "next-auth/react"
 
 function Signup() {
   const {data: session, status} = useSession()
-  const router = useRouter()
+ // const router = useRouter()
 
 
 

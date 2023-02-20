@@ -2,14 +2,14 @@ import React from 'react'
 import Styles from "../styles/Home.module.css"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
-import Checkout from "../components/Checkout"
+import CheckoutComponent from "../components/Checkout"
 import styles from "../styles/Home.module.css"
 import { Sidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
 import {BsCartCheck} from "react-icons/bs"
-import {useSession} from "next-auth/react"
+import {useSession, signOut} from "next-auth/react"
 import Link from "next/link"
 
-function checkout() {
+function Checkout() {
   
   const {data: session, status} = useSession()
   
@@ -55,7 +55,7 @@ function checkout() {
               )}
        </div>
       <div className={Styles.pagesCheckoutBody}>
-      <Checkout />
+      <CheckoutComponent />
       </div>
     
       <div className={Styles.checkoutPageFooter}>
@@ -65,4 +65,4 @@ function checkout() {
   )
 }
 
-export default checkout
+export default Checkout

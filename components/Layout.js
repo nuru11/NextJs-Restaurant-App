@@ -1,24 +1,24 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import React, {useState} from 'react';
+import React from 'react';
 import styles from "../styles/Home.module.css"
 import {BsCartCheck} from "react-icons/bs"
 import Footer from "./Footer"
 import { signOut, useSession } from "next-auth/react"
 import { Sidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
-import {AiOutlineUnorderedList} from "react-icons/ai"
+//import {AiOutlineUnorderedList} from "react-icons/ai"
 
 
 
 
 export default function Layout({ title, children }) {
  const { data: session, status } = useSession()
-
+/*
  const [showItem, setShowItem] = useState(false)
 
   const handleShowItem = () => {
     setShowItem(pre => !pre)
-  }
+  }*/
 
   return (
     <div className={styles.layout}>

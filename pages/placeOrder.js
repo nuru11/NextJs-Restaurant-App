@@ -9,7 +9,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { placeOrderAction } from '../store/placeOrderSlice'
 import { deleteAllCarts } from '../store/addToCartSlice'
 import {deleteCheckoutInfo} from "../store/checkoutInfoSlice"
-import { useSession } from 'next-auth/react';
+import { useSession, signOut } from 'next-auth/react';
 import { Sidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
 import {BsCartCheck} from "react-icons/bs"
 import styles from "../styles/Home.module.css"
@@ -21,7 +21,7 @@ function PlaceOrder() {
   const route = useRouter()
   const checkoutInfo = useSelector((state) => state.checkoutInfo.checkoutInfoItem)
   const addCart = useSelector((state) => state.carts.cartItems)
-  const placeOrderArray = useSelector((state) => state.placeOrderName.placeOrderArray)
+  //const placeOrderArray = useSelector((state) => state.placeOrderName.placeOrderArray)
 
   const total = addCart.reduce((acc, val) => acc += val.amount * val.price, 0)
 let num = 1
