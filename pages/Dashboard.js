@@ -77,7 +77,7 @@ colspan="3"
 
 import React from 'react'
 import Style from "../styles/Home.module.css"
-import DashboardComponent from '../components/dashboard'
+import DashboardComponent from '../components/Dashboard'
 import Header from "../components/Header"
 import dynamic from 'next/dynamic'
 import { Sidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
