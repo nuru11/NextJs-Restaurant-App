@@ -3,7 +3,7 @@ import Styles from "../styles/Home.module.css"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
 import CheckoutComponent from "../components/Checkout"
-import styles from "../styles/Home.module.css"
+//import styles from "../styles/Home.module.css"
 import { Sidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
 import {BsCartCheck} from "react-icons/bs"
 import {useSession, signOut} from "next-auth/react"
@@ -26,29 +26,29 @@ function Checkout() {
 {status === 'loading' ? (
                 'Loading...'
               ) : session?.user ? (
-                <div className={styles.layoutHeaderSidebarPlateDetailParentMediaQuery}>
+                <div className={Styles.layoutHeaderSidebarPlateDetailParentMediaQuery}>
                 
-                <Sidebar className={styles.layoutHeaderSidebarMediaQuery}>
-  <Menu className={styles.layoutHeaderMenu}>
-    <SubMenu label={session.user.name} className={styles.layoutHeaderSubMenu}>
-      <MenuItem className={styles.layoutHeaderMenuItem}><Link className={styles.layoutSidebarLink} href="/menu">menu</Link>  </MenuItem>
-    <MenuItem className={styles.layoutHeaderMenuItem}> <Link className={styles.layoutSidebarLink} href="/cart">cart</Link> </MenuItem>
-    {session.user.isAdmin &&<MenuItem className={styles.layoutHeaderMenuItem}> <Link className={styles.layoutSidebarLink} href="/dashboard">dashboard</Link> </MenuItem>}
-    <MenuItem className={styles.layoutHeaderMenuItem} onClick={(e) =>{ e.preventDefault() 
+                <Sidebar className={Styles.layoutHeaderSidebarMediaQuery}>
+  <Menu className={Styles.layoutHeaderMenu}>
+    <SubMenu label={session.user.name} className={Styles.layoutHeaderSubMenu}>
+      <MenuItem className={Styles.layoutHeaderMenuItem}><Link className={Styles.layoutSidebarLink} href="/menu">menu</Link>  </MenuItem>
+    <MenuItem className={Styles.layoutHeaderMenuItem}> <Link className={Styles.layoutSidebarLink} href="/cart">cart</Link> </MenuItem>
+    {session.user.isAdmin &&<MenuItem className={Styles.layoutHeaderMenuItem}> <Link className={Styles.layoutSidebarLink} href="/dashboard">dashboard</Link> </MenuItem>}
+    <MenuItem className={Styles.layoutHeaderMenuItem} onClick={(e) =>{ e.preventDefault() 
                 signOut()}}> logOut </MenuItem>
     </SubMenu>
   </Menu>
   </Sidebar> 
 
-  <Link className={styles.layoutHeaderCartIconLink} href="/cart"><BsCartCheck size={70} /></Link>
+  <Link className={Styles.layoutHeaderCartIconLink} href="/cart"><BsCartCheck size={70} /></Link>
 
 </div> ) : (
                <div>
-              <Link href="/Login" className={styles.layoutLoginLink}>
+              <Link href="/Login" className={Styles.layoutLoginLink}>
               <diva >login</diva>
               </Link>
 
-              <Link href="/Signup" className={styles.layoutLoginLink}>
+              <Link href="/Signup" className={Styles.layoutLoginLink}>
               <div>SignUp</div>
               </Link>
               </div>

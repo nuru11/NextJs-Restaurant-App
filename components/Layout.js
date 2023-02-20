@@ -49,7 +49,7 @@ export default function Layout({ title, children }) {
             <diva >menu</diva>
             </Link>
 
-            <Link href="/cart" className={styles.LinkTextDecorationNone}>
+            <Link href="/Cart" className={styles.LinkTextDecorationNone}>
             <diva >contact</diva>
             </Link>
             </div>
@@ -66,6 +66,7 @@ export default function Layout({ title, children }) {
   <Menu className={styles.layoutHeaderMenu}>
     <SubMenu label={session.user.name} className={styles.layoutHeaderSubMenu}>
       <MenuItem className={styles.layoutHeaderMenuItem}> cart </MenuItem>
+      {session.user.isAdmin &&<MenuItem className={styles.layoutHeaderMenuItem}> <Link className={styles.layoutSidebarLink} href="/Dashboard">dashboard</Link> </MenuItem>}
     <MenuItem className={styles.layoutHeaderMenuItem}> favourite </MenuItem>
     <MenuItem className={styles.layoutHeaderMenuItem} onClick={(e) =>{ e.preventDefault() 
                 signOut()}}> logOut </MenuItem>
@@ -97,7 +98,7 @@ export default function Layout({ title, children }) {
   <Menu className={styles.layoutHeaderMenu}>
     <SubMenu label={session.user.name} className={styles.layoutHeaderSubMenu}>
       <MenuItem className={styles.layoutHeaderMenuItem}><Link className={styles.layoutSidebarLink} href="/menu">menu</Link>  </MenuItem>
-    <MenuItem className={styles.layoutHeaderMenuItem}> <Link className={styles.layoutSidebarLink} href="/cart">cart</Link> </MenuItem>
+    <MenuItem className={styles.layoutHeaderMenuItem}> <Link className={styles.layoutSidebarLink} href="/Cart">cart</Link> </MenuItem>
     {session.user.isAdmin &&<MenuItem className={styles.layoutHeaderMenuItem}> <Link className={styles.layoutSidebarLink} href="/Dashboard">dashboard</Link> </MenuItem>}
     <MenuItem className={styles.layoutHeaderMenuItem} onClick={(e) =>{ e.preventDefault() 
                 signOut()}}> logOut </MenuItem>
