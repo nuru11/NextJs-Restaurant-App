@@ -1,5 +1,5 @@
 import React from 'react'
-import Style from "../Styles/Home.module.css"
+import Style from "../styles/Home.module.css"
 
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
 
