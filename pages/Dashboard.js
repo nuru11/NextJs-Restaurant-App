@@ -184,7 +184,7 @@ function Dashboard() {
 
       </div>
 
-      <div className={Style.dashboardPageFooter}>kkk</div>
+      <div className={Style.dashboardPageFooter}></div>
 
     </div>
   )

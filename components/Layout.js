@@ -75,7 +75,7 @@ export default function Layout({ title, children }) {
 </Sidebar> 
 
 </div> ) : (
-               <div>
+               <div className={styles.layoutHeaderAuthentication}>
               <Link href="/Login" className={styles.layoutLoginLink}>
               <diva >login</diva>
               </Link>
@@ -109,7 +109,7 @@ export default function Layout({ title, children }) {
   <Link className={styles.layoutHeaderCartIconLink} href="/cart"><BsCartCheck size={70} /></Link>
 
 </div> ) : (
-               <div>
+               <div className={styles.layoutHeaderAuthenticationMediaQuery}>
               <Link href="/Login" className={styles.layoutLoginLink}>
               <diva >login</diva>
               </Link>
