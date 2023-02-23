@@ -532,8 +532,8 @@ function Dashboard() {
              label: "most sold plates",
              data: [1, 5, 3, 1, 5],
             /* backgroundColor: "rgba(255,99,132,0.2)",*/
-             backgroundColor: "red",
-             borderColor: "rgba(255,99,132,1)",
+             backgroundColor: "gold",
+             borderColor: "gold",
              borderWidth: 2,
              hoverBackgroundColor: "rgba(255,99,132,0.4)",
              hoverBorderColor: "black",   

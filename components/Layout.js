@@ -13,12 +13,6 @@ import { Sidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
 
 export default function Layout({ title, children }) {
  const { data: session, status } = useSession()
-/*
- const [showItem, setShowItem] = useState(false)
-
-  const handleShowItem = () => {
-    setShowItem(pre => !pre)
-  }*/
 
   return (
     <div className={styles.layout}>
@@ -65,7 +59,7 @@ export default function Layout({ title, children }) {
       <Sidebar className={styles.layoutHeaderSidebar}>
   <Menu className={styles.layoutHeaderMenu}>
     <SubMenu label={session.user.name} className={styles.layoutHeaderSubMenu}>
-      <MenuItem className={styles.layoutHeaderMenuItem}> cart </MenuItem>
+      <MenuItem className={styles.layoutHeaderMenuItem}> <Link href="/cart">cart</Link> </MenuItem>
       {session.user.isAdmin &&<MenuItem className={styles.layoutHeaderMenuItem}> <Link className={styles.layoutSidebarLink} href="/Dashboard">dashboard</Link> </MenuItem>}
     <MenuItem className={styles.layoutHeaderMenuItem}> favourite </MenuItem>
     <MenuItem className={styles.layoutHeaderMenuItem} onClick={(e) =>{ e.preventDefault() 
@@ -98,7 +92,7 @@ export default function Layout({ title, children }) {
   <Menu className={styles.layoutHeaderMenu}>
     <SubMenu label={session.user.name} className={styles.layoutHeaderSubMenu}>
       <MenuItem className={styles.layoutHeaderMenuItem}><Link className={styles.layoutSidebarLink} href="/menu">menu</Link>  </MenuItem>
-    <MenuItem className={styles.layoutHeaderMenuItem}> <Link className={styles.layoutSidebarLink} href="/Cart">cart</Link> </MenuItem>
+    <MenuItem className={styles.layoutHeaderMenuItem}> <Link className={styles.layoutSidebarLink} href="/cart">cart</Link> </MenuItem>
     {session.user.isAdmin &&<MenuItem className={styles.layoutHeaderMenuItem}> <Link className={styles.layoutSidebarLink} href="/Dashboard">dashboard</Link> </MenuItem>}
     <MenuItem className={styles.layoutHeaderMenuItem} onClick={(e) =>{ e.preventDefault() 
                 signOut()}}> logOut </MenuItem>

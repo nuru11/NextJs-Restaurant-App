@@ -67,7 +67,8 @@ function PopularFood() {
                 <li ><button className={Styles.popularFoodComponentItemsButton} onClick={() => addToCartHandler(data.plates[2])}>add</button></li>
             </ul>
         </div>
-           <ToastContainer />
+           <ToastContainer className={Styles.toastContainer} />
+
         </div>
     </div>
   )

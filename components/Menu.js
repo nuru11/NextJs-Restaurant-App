@@ -37,7 +37,8 @@ function Menu({plateData}) {
          </Link>
   
 <button onClick={() => addToCartHandler(plateData)} className={Style.menuButton}>add to basket</button>
-<ToastContainer />
+<ToastContainer className={Style.toastContainer} />
+
     </div>
   )
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 import Style from "../styles/Home.module.css"
 
-
+ 
 function About() {
   return (
     <div className={Style.aboutComponent}>

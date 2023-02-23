@@ -15,6 +15,10 @@
   
 }
 
+.layoutHeaderMenuItemLink{
+  text-decoration: none;
+}
+
 .hiddenText{
   display:none;
 }
@@ -306,8 +310,8 @@
 /* =========== menu background-img ======= */
 
 .menuBackgroundImg{
-  /*background-image: url("../public/images/food9.jpg"); */
-  background-image: url("../public/images/backgroun-img2.jpg");
+  background-image: url("../public/images/food9.jpg"); 
+ /* background-image: url("../public/images/backgroun-img2.jpg");*/
    background-size: cover;
    background-attachment: fixed;
    height: 100vh;
@@ -636,14 +640,14 @@
   /*.layoutHeaderSidebarCartParent{
     display: none;
   }*/
-
+/*
   .layoutHeaderNav{
 
   }
 
   .layoutMainTag{
  
-  }
+  }*/
 
   .layout{
     width: 100%;
@@ -928,6 +932,7 @@
  
   width: 80%;
   margin: 0 auto;
+  
 }
 
 .footerMessageUsTitle{
@@ -937,11 +942,13 @@
 .footerMessageUsInput{
   width: 80%;
   height: 90px;
+  font-size: 50px;
 }
 
 .footerMessageUsButton{
   width: 80%;
   height: 90px;
+  font-size: 70px;
 }
 
 .footerAuthentication{
@@ -2004,6 +2011,7 @@ position: relative;
     top: 90px;
     margin-left: 30px;
     border-radius: 30px;
+    display: block;
      }
 
      .pagesCartCheckoutTitle{
@@ -2247,6 +2255,14 @@ position: relative;
   width: auto;
 }
 
+.dashboardComponentNumber{
+  height: 150px;
+}
+
+.dashboardComponentNumberTitle{
+  font-size: 50px;
+}
+
 
 .dashboardPageTableParent{
   border: 5px solid rgb(74, 61, 61);
@@ -2398,4 +2414,52 @@ position: relative;
       margin-top: 20px;
     }
 
+    /* ==================== about-us media query ========================== */
+
+    .aboutComponent{
+    
+      height: 1000px;
+    }
+
+    .aboutComponentItemsParent{
+   
+      height: 100%;
+      width: 100%;
+    }
+
+    .aboutComponentBackgroundImage{
+      height: 100%;
+      width: 50%;
+      background-size: contain;
+    }
+
+    .aboutComponentTextParent{
+      width: 50%;
+      height: 100%;
+      
+    }
+
+    .aboutComponentTextTitle{
+      font-size: 50px;
+    }
+
+    .aboutComponentText{
+      height: 90%;
+      font-size: 50px;
+      overflow: auto;
+      margin-right: 50px;
+    }
+
+    /* ================== menu toastcontainer =================== */
+/*
+    .menuToastContainer{
+      border: 10px solid red;
+    }*/
+
+    .toastContainer{
+      width: 1000px;
+      height: 200px;
+      font-size: 90px;
+      margin-left: 20%;
+    }
 }
