@@ -1,7 +1,7 @@
 import SideNav, { /*Toggle, Nav,*/ NavItem, NavIcon, NavText } from '@trendmicro/react-sidenav';
 import '@trendmicro/react-sidenav/dist/react-sidenav.css';
 import Styles from "../styles/Home.module.css"
-import Link from "next/Link"
+import Link from "next/link"
 import {AiOutlineHome} from "react-icons/ai"
 import {MdOutlineRestaurantMenu} from "react-icons/md"
 import {AiOutlineShoppingCart} from "react-icons/ai"
