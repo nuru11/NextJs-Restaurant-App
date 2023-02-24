@@ -4,6 +4,9 @@ import Link from "next/link"
 import Style from "../styles/Home.module.css"
 import { signIn, useSession } from 'next-auth/react';
 import { useRouter } from 'next/router';
+import {FcGoogle} from "react-icons/fc"
+import {BsFacebook} from "react-icons/bs"
+import {AiFillGithub} from "react-icons/ai"
 
 
 
@@ -87,9 +90,9 @@ function Login() {
         </div>
 
         <div className={Style.loginComponentFormSignInwithGoogleParent}>
-          <div className={Style.loginComponentFormSignInwithGoogle}>SignIn with Google</div>
-          <div className={Style.loginComponentFormSignInwithGoogle}>SignIn with Facebook</div>
-          <div className={Style.loginComponentFormSignInwithGoogle}>SignIn with Github</div>
+          <div className={Style.loginComponentFormSignInwithGoogle}>SignIn with Google <FcGoogle /></div>
+          <div className={Style.loginComponentFormSignInwithGoogle}>SignIn with Facebook <BsFacebook /></div>
+          <div className={Style.loginComponentFormSignInwithGoogle}>SignIn with Github <AiFillGithub /></div>
         </div>
 
        

@@ -639,7 +639,7 @@ function Dashboard() {
 
 <div className={Styles.dashboardComponentNumber}>
   <div className={Styles.dashboardComponentNumberTitle}>orders</div>
-  <div className={Styles.dashboardComponentNumberChild}>432</div>
+  <div className={Styles.dashboardComponentNumberChild}>type 432</div>
 </div>
 
   <div className={Styles.dashboardComponentLineCharts}>

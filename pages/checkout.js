@@ -2,6 +2,7 @@ import React from 'react'
 import Styles from "../styles/Home.module.css"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
+import SideNa from '../components/SideNav'
 import CheckoutComponent from "../components/Checkout"
 //import styles from "../styles/Home.module.css"
 import { Sidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
@@ -27,6 +28,8 @@ function Checkout() {
                 'Loading...'
               ) : session?.user ? (
                 <div className={Styles.layoutHeaderSidebarPlateDetailParentMediaQuery}>
+
+                  <div><SideNa /></div>
                 
                 <Sidebar className={Styles.layoutHeaderSidebarMediaQuery}>
   <Menu className={Styles.layoutHeaderMenu}>

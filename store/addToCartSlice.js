@@ -18,12 +18,12 @@ const cartSlice = createSlice({
         addToCart: (state, action) => {
             const isExcit = state.cartItems.find(item => item.id === action.payload.id)
             if (isExcit) {
-                 toast.error("item is already excit",{ position: toast.POSITION.BOTTOM_CENTER}) 
+                 toast.error("item is already existing",{ position: toast.POSITION.BOTTOM_CENTER}) 
                  return;
             } else {
                 state.cartItems.push(action.payload) 
                 Cookies.set("addtocart", JSON.stringify(state.cartItems))
-                toast.success("item have successfully added to the basket", {position: "bottom-center",
+                toast.success("item have successfully added", {position: "bottom-center",
                  autoClose: 2000, draggable: true,pauseOnHover: true, })
             }
             

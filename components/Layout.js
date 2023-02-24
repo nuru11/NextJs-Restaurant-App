@@ -6,6 +6,7 @@ import {BsCartCheck} from "react-icons/bs"
 import Footer from "./Footer"
 import { signOut, useSession } from "next-auth/react"
 import { Sidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
+import SideNa from "./SideNav"
 //import {AiOutlineUnorderedList} from "react-icons/ai"
 
 
@@ -23,6 +24,9 @@ export default function Layout({ title, children }) {
       </Head>
 
       <div >
+
+        
+
         <header className={styles.header}>
         <nav  className={styles.layoutHeaderNav}>
           
@@ -87,12 +91,16 @@ export default function Layout({ title, children }) {
                 'Loading...'
               ) : session?.user ? (
                 <div className={styles.layoutHeaderSidebarCartParentMediaQuery}>
+
+                <div><SideNa /></div>
                 
                 <Sidebar className={styles.layoutHeaderSidebarMediaQuery}>
   <Menu className={styles.layoutHeaderMenu}>
     <SubMenu label={session.user.name} className={styles.layoutHeaderSubMenu}>
-      <MenuItem className={styles.layoutHeaderMenuItem}><Link className={styles.layoutSidebarLink} href="/menu">menu</Link>  </MenuItem>
+      <MenuItem className={styles.layoutHeaderMenuItem}><Link className={styles.layoutSidebarLink} href="/profile">profile</Link>  </MenuItem>
     <MenuItem className={styles.layoutHeaderMenuItem}> <Link className={styles.layoutSidebarLink} href="/cart">cart</Link> </MenuItem>
+    <MenuItem className={styles.layoutHeaderMenuItem}> <Link className={styles.layoutSidebarLink} href="/favorite">favorite</Link> </MenuItem>
+    <MenuItem className={styles.layoutHeaderMenuItem}> <Link className={styles.layoutSidebarLink} href="/history">my orders</Link> </MenuItem>
     {session.user.isAdmin &&<MenuItem className={styles.layoutHeaderMenuItem}> <Link className={styles.layoutSidebarLink} href="/Dashboard">dashboard</Link> </MenuItem>}
     <MenuItem className={styles.layoutHeaderMenuItem} onClick={(e) =>{ e.preventDefault() 
                 signOut()}}> logOut </MenuItem>

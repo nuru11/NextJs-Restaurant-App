@@ -1795,13 +1795,17 @@ position: relative;
   display: none
 }
 
+.sideNavComponent{
+  display: none;
+}
+
 /* ========== dropdown media query ================= */
 
 @media (max-width: 767px){
 
   .header{
-    width: 1300px;
-    margin-left: 50px;
+    width: 1400px;
+    /*margin-left: 50px;*/
    }
 
    .layoutHeaderAuthenticationMediaQuery{
@@ -1824,7 +1828,6 @@ position: relative;
     justify-content: space-between;
     width: 100%;
     height: fit-content;
-    
    }
   
    .layoutHeaderSidebarCartParent{
@@ -2097,8 +2100,12 @@ position: relative;
 
      .placeOrderComponentTitle{
       font-size: 90px;
+      margin-left: 90px;
      }
 
+     .placeOrderComponentInfo{
+     margin-left: 70px;
+     }
      .placeOrderComponentItemsTitls{
       font-size: 70px;
       margin-top:30px
@@ -2132,8 +2139,8 @@ position: relative;
 
      .pagesPlaceOrderCheckoutbtn{
       height: 100px;
-      font-size: 30px;
-      margin-left: 70px;
+      font-size: 50px;
+      margin-left: 100px;
      }
 
      .placeOrderComponentParent{
@@ -2257,6 +2264,7 @@ position: relative;
 
 .dashboardComponentNumber{
   height: 150px;
+  margin-left: 100px;
 }
 
 .dashboardComponentNumberTitle{
@@ -2463,4 +2471,38 @@ position: relative;
       margin-left: 20%;
       margin-bottom: 90px;
     }
+
+
+    /* =============== sideNav media query ====================== */
+
+    .sideNavComponent{
+      display: block;
+      position: fixed;
+      height: 500px;
+      background-color: rosybrown;
+     
+    }
+
+    
+    .sideNavComponentNav{
+       
+
+    }
+
+    .sideNavComponentNavItems{
+      margin-top: 20px;
+    }
+
+    .sideNavComponentNavText{
+      margin-top: 20px;
+    }
+
+    
+    .sideNavComponentLinks{
+      font-size: 50px;
+      text-decoration: none;
+    }
+
+    
 }
+

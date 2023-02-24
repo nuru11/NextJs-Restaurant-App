@@ -3,6 +3,7 @@ import Style from "../styles/Home.module.css"
 import PlaceOrderComponent from '../components/placeOrder'
 import Header from '../components/Header'
 import Footer from "../components/Footer"
+import SideNa from '../components/SideNav'
 import dynamic from 'next/dynamic'
 import { useRouter } from 'next/router'
 import { useSelector, useDispatch } from 'react-redux'
@@ -66,12 +67,15 @@ let num = 1
                 'Loading...'
               ) : session?.user ? (
                 <div className={Style.layoutHeaderSidebarPlateDetailParentMediaQuery}>
+
+                  <div><SideNa /></div>
                 
                 <Sidebar className={Style.layoutHeaderSidebarMediaQuery}>
   <Menu className={Style.layoutHeaderMenu}>
     <SubMenu label={session.user.name} className={Style.layoutHeaderSubMenu}>
-      <MenuItem className={Style.layoutHeaderMenuItem}><Link className={Style.layoutSidebarLink} href="/menu">menu</Link>  </MenuItem>
+      <MenuItem className={Style.layoutHeaderMenuItem}><Link className={Style.layoutSidebarLink} href="/profile">profile</Link>  </MenuItem>
     <MenuItem className={Style.layoutHeaderMenuItem}> <Link className={Style.layoutSidebarLink} href="/cart">cart</Link> </MenuItem>
+    <MenuItem className={Style.layoutHeaderMenuItem}> <Link className={Style.layoutSidebarLink} href="/favorite">favorite</Link> </MenuItem>
     {session.user.isAdmin &&<MenuItem className={Style.layoutHeaderMenuItem}> <Link className={Style.layoutSidebarLink} href="/Dashboard">dashboard</Link> </MenuItem>}
     <MenuItem className={Style.layoutHeaderMenuItem} onClick={(e) =>{ e.preventDefault() 
                 signOut()}}> logOut </MenuItem>

@@ -14,6 +14,7 @@ function Header() {
   
   return (
     <div className={styles.independentHeader}> 
+
         <nav>
           
           <div className={styles.headerItemParent}>
@@ -52,7 +53,7 @@ function Header() {
       <Sidebar className={styles.layoutHeaderSidebar}>
   <Menu className={styles.layoutHeaderMenu}>
     <SubMenu label={session.user.name} className={styles.layoutHeaderSubMenu}>
-      <MenuItem className={styles.layoutHeaderMenuItem}> <Link className={styles.layoutHeaderMenuItemLink} href="/menu">menufffffff</Link></MenuItem>
+      <MenuItem className={styles.layoutHeaderMenuItem}> <Link className={styles.layoutHeaderMenuItemLink} href="/menu">menu</Link></MenuItem>
       <MenuItem className={styles.layoutHeaderMenuItem}> <Link className={styles.layoutHeaderMenuItemLink} href="/cart"> cart</Link> </MenuItem>
     <MenuItem className={styles.layoutHeaderMenuItem}> favourite </MenuItem>
     {<MenuItem className={styles.layoutHeaderMenuItem}><Link className={styles.layoutHeaderMenuItemLink} href="/Dashboard">dashboard</Link></MenuItem>}
@@ -98,3 +99,20 @@ export default Header
                 </div>
             </div>
             */
+
+            /*  <label>
+
+What do we eat?
+
+<select>
+
+  <option value="fruit">Fruit</option>
+
+  <option value="vegetable">Vegetable</option>
+
+  <option value="meat">Meat</option>
+
+</select>
+
+</label>
+*/

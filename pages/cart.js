@@ -5,6 +5,7 @@ import {useRouter} from "next/router"
 import CartComponent from "../components/Cart"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
+import SideNa from '../components/SideNav'
 import dynamic from "next/dynamic"
 import {useSession, signOut} from "next-auth/react"
 import { Sidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
@@ -40,12 +41,16 @@ function Cart() {
                 'Loading...'
               ) : session?.user ? (
                 <div className={Styles.layoutHeaderSidebarPlateDetailParentMediaQuery}>
+
+                  <div><SideNa /></div>
                 
                 <Sidebar className={Styles.layoutHeaderSidebarMediaQuery}>
   <Menu className={Styles.layoutHeaderMenu}>
     <SubMenu label={session.user.name} className={Styles.layoutHeaderSubMenu}>
-      <MenuItem className={Styles.layoutHeaderMenuItem}><Link className={Styles.layoutSidebarLink} href="/menu">menu</Link>  </MenuItem>
+      <MenuItem className={Styles.layoutHeaderMenuItem}><Link className={Styles.layoutSidebarLink} href="/profile">profile</Link>  </MenuItem>
     <MenuItem className={Styles.layoutHeaderMenuItem}> <Link className={Styles.layoutSidebarLink} href="/cart">cart</Link> </MenuItem>
+    <MenuItem className={Styles.layoutHeaderMenuItem}> <Link className={Styles.layoutSidebarLink} href="/favorite">favorite</Link> </MenuItem>
+    <MenuItem className={Styles.layoutHeaderMenuItem}> <Link className={Styles.layoutSidebarLink} href="/history">my orders</Link> </MenuItem>
     {session.user.isAdmin &&<MenuItem className={Styles.layoutHeaderMenuItem}> <Link className={Styles.layoutSidebarLink} href="/Dashboard">dashboard</Link> </MenuItem>}
     <MenuItem className={Styles.layoutHeaderMenuItem} onClick={(e) =>{ e.preventDefault() 
                 signOut()}}> logOut </MenuItem>
