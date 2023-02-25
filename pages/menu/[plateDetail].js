@@ -27,8 +27,6 @@ function PlateDetail() {
 
   const addToCartHandler = () => {
     dispatch(addToCart(plate))
-    alert(addToCart)
-     alert(JSON.stringify(plate))
        router.push("/cart")
   }
 

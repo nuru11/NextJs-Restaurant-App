@@ -1896,9 +1896,10 @@ position: relative;
    }
 
    .menuButton{
-    width: 1000px;
-    font-size: 50px;
-    height: 60px;
+    width: 900px;
+    font-size: 70px;
+    height: 90px;
+    border-radius: 20px;
    }
 /*
    .layoutFooter{
@@ -2479,8 +2480,7 @@ position: relative;
       display: block;
       position: fixed;
       height: 500px;
-      background-color: rosybrown;
-     
+    
     }
 
     

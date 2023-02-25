@@ -13,6 +13,7 @@ function SideNa() {
   return (
     <SideNav
     className={Styles.sideNavComponent}
+    style={{ backgroundColor: 'rosybrown' }}
 >
     <SideNav.Toggle  />
     <SideNav.Nav defaultSelected="home" className={Styles.sideNavComponentNav} >
