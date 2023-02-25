@@ -90,7 +90,8 @@ function Login() {
         </div>
 
         <div className={Style.loginComponentFormSignInwithGoogleParent}>
-          <div className={Style.loginComponentFormSignInwithGoogle}>SignIn with Google <FcGoogle /></div>
+          <div className={Style.loginComponentFormSignInwithGoogle}><Link href="/api/auth/signin" onClick={(e) => {e.preventDefault()
+            signIn()}}>SignIn with Google </Link><FcGoogle /></div>
           <div className={Style.loginComponentFormSignInwithGoogle}>SignIn with Facebook <BsFacebook /></div>
           <div className={Style.loginComponentFormSignInwithGoogle}>SignIn with Github <AiFillGithub /></div>
         </div>

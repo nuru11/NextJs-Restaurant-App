@@ -1,17 +1,16 @@
 import bcryptjs from 'bcryptjs';
 import NextAuth from 'next-auth';
 import CredentialsProvider from 'next-auth/providers/credentials';
+import GithubProvider from "next-auth/providers/github"
 import User from '../../../utils/models/userModel';
 import mongoose from 'mongoose';
 
-console.log(".lllllllllllll")
 export default NextAuth({
   session: {
     strategy: 'jwt',
   },
   callbacks: {
     async jwt({ token, user }) {
-      console.log("nnnnnnn")
       if (user?._id) token._id = user._id;
       if (user?.isAdmin) token.isAdmin = user.isAdmin;
       console.log("tooken  " + JSON.stringify(token.isAdmin))
@@ -20,7 +19,7 @@ export default NextAuth({
     async session({ session, token }) {
       if (token?._id) session.user._id = token._id;
       if (token?.isAdmin) session.user.isAdmin = token.isAdmin;
-      console.log("uuuuuser  " + console.log(JSON.stringify(session.user.name)))
+      console.log("user  " + console.log(JSON.stringify(session.user.name)))
       return session;
     },
   },
@@ -32,6 +31,7 @@ export default NextAuth({
         const user = await User.findOne({
           email: credentials.email,
         });
+
         await mongoose.disconnect(process.env.MONGODB_URI);
         if (user && bcryptjs.compareSync(credentials.password, user.password)) {
           return {
@@ -44,11 +44,23 @@ export default NextAuth({
         throw new Error('Invalid email or password');
       },
     }),
+
+    GithubProvider({
+      clientId: process.env.GITHUB_ID,
+      clientSecret: process.env.GITHUB_SECRET,
+    }),
+    
   ],
-  pages: {
-    signIn: "/login",
-  },
+
+  
   secret: "secret", 
   database: process.env.MONGODB_URI
 });
+
+/*
+
+  pages: {
+    signIn: "/login",
+  },
+  */
 
