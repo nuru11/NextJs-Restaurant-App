@@ -112,8 +112,9 @@ export default function Layout({ title, children }) {
 
 </div> ) : (
                <div className={styles.layoutHeaderAuthenticationMediaQuery}>
+                  <div><SideNa /></div>
               <Link href="/Login" className={styles.layoutLoginLink}>
-              <diva >login</diva>
+              <div>login</div>
               </Link>
 
               <Link href="/Signup" className={styles.layoutLoginLink}>

@@ -5,11 +5,18 @@ import Link from "next/link"
 import {AiOutlineHome} from "react-icons/ai"
 import {MdOutlineRestaurantMenu} from "react-icons/md"
 import {AiOutlineShoppingCart} from "react-icons/ai"
+import {GoSignIn} from "react-icons/go"
+import {useSession} from "next-auth/react"
+
 
 
 import React from 'react'
 
+
+
 function SideNa() {
+    const { data: session} = useSession()
+
   return (
     <SideNav
     className={Styles.sideNavComponent}
@@ -55,6 +62,19 @@ function SideNa() {
             </NavText>
            
         </NavItem>
+
+       {!session && <NavItem eventKey="Login" className={Styles.sideNavComponentNavItems}>
+
+<NavIcon>
+  
+  <Link className={Styles.sideNavComponentLinks} href="/Login" ><GoSignIn size={40} /></Link>
+</NavIcon>
+
+<NavText >
+<Link className={Styles.sideNavComponentLinks} href="/Login" >Login</Link>
+</NavText>
+
+</NavItem>}
 
      
 
