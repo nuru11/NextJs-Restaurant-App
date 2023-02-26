@@ -4,8 +4,8 @@ import Link from "next/link"
 import Style from "../styles/Home.module.css"
 import { signIn, useSession } from 'next-auth/react';
 import { useRouter } from 'next/router';
-import {FcGoogle} from "react-icons/fc"
-import {BsFacebook} from "react-icons/bs"
+/*import {FcGoogle} from "react-icons/fc"
+import {BsFacebook} from "react-icons/bs"*/
 import {AiFillGithub} from "react-icons/ai"
 
 
@@ -88,12 +88,11 @@ function Login() {
             id="password"
           ></input>
         </div>
-
+      
         <div className={Style.loginComponentFormSignInwithGoogleParent}>
-          <div className={Style.loginComponentFormSignInwithGoogle}><Link href="/api/auth/signin" onClick={(e) => {e.preventDefault()
-            signIn()}}>SignIn with Google </Link><FcGoogle /></div>
-          <div className={Style.loginComponentFormSignInwithGoogle}>SignIn with Facebook <BsFacebook /></div>
-          <div className={Style.loginComponentFormSignInwithGoogle}>SignIn with Github <AiFillGithub /></div>
+          {/*<div className={Style.loginComponentFormSignInwithGoogle}><Link className={Style.loginComponentFormSignInwithGoogleLink} href="/">signIn with Google <FcGoogle /></Link></div>
+          <div className={Style.loginComponentFormSignInwithGoogle}> <Link className={Style.loginComponentFormSignInwithGoogleLink} href="/">signIn with Facebook <BsFacebook color={"blue"}/></Link> </div> */}
+          <div className={Style.loginComponentFormSignInwithGoogle}><Link className={Style.loginComponentFormSignInwithGoogleLink} href="https://github.com/login?client_id=a33094236fe2a20398f1&return_to=%2Flogin%2Foauth%2Fauthorize%3Fclient_id%3Da33094236fe2a20398f1%26redirect_uri%3Dhttp%253A%252F%252Flocalhost%253A3000%252Fapi%252Fauth%252Fcallback%252Fgithub%26response_type%3Dcode%26scope%3Dread%253Auser%2Buser%253Aemail%26state%3DwBQROUXZ9ybpJJMmpSRLzchJ2lLDdCEwA3uXU3Ukw8s">SignIn with Github <AiFillGithub color="black" /></Link> </div>
         </div>
 
        
