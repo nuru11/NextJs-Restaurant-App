@@ -7,7 +7,6 @@ import { useRouter } from 'next/router';
 /*import {FcGoogle} from "react-icons/fc"*/
 import {BsFacebook} from "react-icons/bs"
 import {AiFillGithub} from "react-icons/ai"
-import Github from 'next-auth/providers/github';
 
 
 
