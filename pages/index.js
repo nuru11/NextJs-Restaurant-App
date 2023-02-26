@@ -1,6 +1,6 @@
 import Layout from '../components/Layout';
 import BackgroundImg from '../components/Background-img';
-import PopularPlate from "../components/Popular-plates"
+//import PopularPlate from "../components/Popular-plates"
 import Review from "../components/Review"
 import PopularFood from "../components/Popular-food"
 import About from "../components/About"
@@ -12,7 +12,7 @@ export default function Home() {
     <div className={Style.home}>
      <Layout title="Home Page">
      <BackgroundImg />
-     <PopularPlate />
+    {/* <PopularPlate />*/}
      <PopularFood />
      <About />
      <Review />
