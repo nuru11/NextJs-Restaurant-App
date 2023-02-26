@@ -4,14 +4,16 @@ import Link from "next/link"
 import Style from "../styles/Home.module.css"
 import { signIn, useSession } from 'next-auth/react';
 import { useRouter } from 'next/router';
-/*import {FcGoogle} from "react-icons/fc"
-import {BsFacebook} from "react-icons/bs"*/
+/*import {FcGoogle} from "react-icons/fc"*/
+import {BsFacebook} from "react-icons/bs"
 import {AiFillGithub} from "react-icons/ai"
 
 
 
 
 function Login() {
+
+
 
   const { data: session } = useSession();
 
@@ -90,8 +92,8 @@ function Login() {
         </div>
       
         <div className={Style.loginComponentFormSignInwithGoogleParent}>
-          {/*<div className={Style.loginComponentFormSignInwithGoogle}><Link className={Style.loginComponentFormSignInwithGoogleLink} href="/">signIn with Google <FcGoogle /></Link></div>
-          <div className={Style.loginComponentFormSignInwithGoogle}> <Link className={Style.loginComponentFormSignInwithGoogleLink} href="/">signIn with Facebook <BsFacebook color={"blue"}/></Link> </div> */}
+          {/*<div className={Style.loginComponentFormSignInwithGoogle}><Link className={Style.loginComponentFormSignInwithGoogleLink} href="/">signIn with Google <FcGoogle /></Link></div>*/}
+          <div className={Style.loginComponentFormSignInwithGoogle}> <Link className={Style.loginComponentFormSignInwithGoogleLink} href="https://www.facebook.com/login.php?skip_api_login=1&api_key=746236590185108&kid_directed_site=0&app_id=746236590185108&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fv11.0%2Fdialog%2Foauth%3Fclient_id%3D746236590185108%26scope%3Demail%26response_type%3Dcode%26redirect_uri%3Dhttp%253A%252F%252Flocalhost%253A3000%252Fapi%252Fauth%252Fcallback%252Ffacebook%26state%3DuRoH3ig68oCa4Fgl95hzWOcVp0h5TnmzZGbS00U2Ua0%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3D3a7dab7c-21c3-41e8-9ac2-2fd7cd119444%26tp%3Dunspecified&cancel_url=https%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fcallback%2Ffacebook%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3DuRoH3ig68oCa4Fgl95hzWOcVp0h5TnmzZGbS00U2Ua0%23_%3D_&display=page&locale=en_US&pl_dbl=0">signIn with Facebook <BsFacebook color={"blue"}/></Link> </div> 
           <div className={Style.loginComponentFormSignInwithGoogle}><Link className={Style.loginComponentFormSignInwithGoogleLink} href="https://github.com/login?client_id=a33094236fe2a20398f1&return_to=%2Flogin%2Foauth%2Fauthorize%3Fclient_id%3Da33094236fe2a20398f1%26redirect_uri%3Dhttp%253A%252F%252Flocalhost%253A3000%252Fapi%252Fauth%252Fcallback%252Fgithub%26response_type%3Dcode%26scope%3Dread%253Auser%2Buser%253Aemail%26state%3DwBQROUXZ9ybpJJMmpSRLzchJ2lLDdCEwA3uXU3Ukw8s">SignIn with Github <AiFillGithub color="black" /></Link> </div>
         </div>
 
