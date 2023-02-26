@@ -20,9 +20,9 @@ function Login() {
 
   
   useEffect(() => {
-  /*  if (session?.user) {
+    if (session?.user) {
       router.push(redirect || '/');
-    }*/
+    }
   }, [router, session, redirect]);
 
 
