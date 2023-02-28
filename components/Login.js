@@ -82,6 +82,7 @@ function Login() {
             })}
             className={Style.loginComponentFormInput}
             id="email"
+            value="admin@gmail.com"
             autoFocus
           ></input>
         
@@ -96,6 +97,7 @@ function Login() {
             })}
             className={Style.loginComponentFormInput}
             id="password"
+            value="123456"
           ></input>
         </div>
       

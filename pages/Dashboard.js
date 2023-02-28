@@ -91,9 +91,20 @@ import SideNa from '../components/SideNav'
 import Order from "../utils/models/orderModel"
 import db from "../utils/db"*/
 
+
+
 function Dashboard() {
 
   const {data: session, status} = useSession()
+
+  if(status === "unauthenticated" || !session?.user.isAdmin){
+    return (
+      <div>
+        <div>you don`t allowed to enter this page!</div>
+        <div>go <Link href="/">home</Link></div>
+      </div>
+    )
+  }
 
  
   return (
@@ -116,9 +127,9 @@ function Dashboard() {
     <SubMenu label={session.user.name} className={Style.layoutHeaderSubMenu}>
       <MenuItem className={Style.layoutHeaderMenuItem}><Link className={Style.layoutSidebarLink} href="/profile">profile</Link>  </MenuItem>
     <MenuItem className={Style.layoutHeaderMenuItem}> <Link className={Style.layoutSidebarLink} href="/cart">cart</Link> </MenuItem>
-    <MenuItem className={Style.layoutHeaderMenuItem}> <Link className={Style.layoutSidebarLink} href="/favorite">favorite</Link> </MenuItem>
-    <MenuItem className={Style.layoutHeaderMenuItem}> <Link className={Style.layoutSidebarLink} href="/history">my orders</Link> </MenuItem>
-    {session.user.isAdmin &&<MenuItem className={Style.layoutHeaderMenuItem}> <Link className={Style.layoutSidebarLink} href="/dashboard">dashboard</Link> </MenuItem>}
+    <MenuItem className={Style.layoutHeaderMenuItem}> <Link className={Style.layoutSidebarLink} href="/favourite">favourite</Link> </MenuItem>
+    <MenuItem className={Style.layoutHeaderMenuItem}> <Link className={Style.layoutSidebarLink} href="/myOrders">my orders</Link> </MenuItem>
+    {session.user.isAdmin &&<MenuItem className={Style.layoutHeaderMenuItem}> <Link className={Style.layoutSidebarLink} href="/Dashboard">dashboard</Link> </MenuItem>}
     <MenuItem className={Style.layoutHeaderMenuItem} onClick={(e) =>{ e.preventDefault() 
                 signOut()}}> logOut </MenuItem>
     </SubMenu>
@@ -146,7 +157,7 @@ function Dashboard() {
           <DashboardComponent />
           </div>
 
-        <div className={Style.dashboardPageTableParent}>
+          <div className={Style.dashboardPageTableParent}>
         <table border="1" className={Style.DashboardPageTable}>
           <caption className={Style.dashboardPageTableTitle}>orders</caption>
   <tr>

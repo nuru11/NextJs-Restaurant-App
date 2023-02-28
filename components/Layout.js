@@ -63,9 +63,10 @@ export default function Layout({ title, children }) {
       <Sidebar className={styles.layoutHeaderSidebar}>
   <Menu className={styles.layoutHeaderMenu}>
     <SubMenu label={session.user.name} className={styles.layoutHeaderSubMenu}>
-      <MenuItem className={styles.layoutHeaderMenuItem}> <Link href="/cart">cart</Link> </MenuItem>
+      <MenuItem className={styles.layoutHeaderMenuItem}> <Link className={styles.layoutSidebarLink} href="/cart">cart</Link> </MenuItem>
+      <MenuItem className={styles.layoutHeaderMenuItem}> <Link className={styles.layoutSidebarLink} href="/myOrders">my orders</Link> </MenuItem>
       {session.user.isAdmin &&<MenuItem className={styles.layoutHeaderMenuItem}> <Link className={styles.layoutSidebarLink} href="/Dashboard">dashboard</Link> </MenuItem>}
-    <MenuItem className={styles.layoutHeaderMenuItem}> favourite </MenuItem>
+    <MenuItem className={styles.layoutHeaderMenuItem}> <Link href="favourite">favourite</Link> </MenuItem>
     <MenuItem className={styles.layoutHeaderMenuItem} onClick={(e) =>{ e.preventDefault() 
                 signOut()}}> logOut </MenuItem>
     </SubMenu>
@@ -99,8 +100,8 @@ export default function Layout({ title, children }) {
     <SubMenu label={session.user.name} className={styles.layoutHeaderSubMenu}>
       <MenuItem className={styles.layoutHeaderMenuItem}><Link className={styles.layoutSidebarLink} href="/profile">profile</Link>  </MenuItem>
     <MenuItem className={styles.layoutHeaderMenuItem}> <Link className={styles.layoutSidebarLink} href="/cart">cart</Link> </MenuItem>
-    <MenuItem className={styles.layoutHeaderMenuItem}> <Link className={styles.layoutSidebarLink} href="/favorite">favorite</Link> </MenuItem>
-    <MenuItem className={styles.layoutHeaderMenuItem}> <Link className={styles.layoutSidebarLink} href="/history">my orders</Link> </MenuItem>
+    <MenuItem className={styles.layoutHeaderMenuItem}> <Link className={styles.layoutSidebarLink} href="/favourite">favourite</Link> </MenuItem>
+    <MenuItem className={styles.layoutHeaderMenuItem}> <Link className={styles.layoutSidebarLink} href="/myOrders">my orders</Link> </MenuItem>
     {session.user.isAdmin &&<MenuItem className={styles.layoutHeaderMenuItem}> <Link className={styles.layoutSidebarLink} href="/Dashboard">dashboard</Link> </MenuItem>}
     <MenuItem className={styles.layoutHeaderMenuItem} onClick={(e) =>{ e.preventDefault() 
                 signOut()}}> logOut </MenuItem>

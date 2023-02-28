@@ -19,6 +19,10 @@
   text-decoration: none;
 }
 
+.layoutSidebarLink{
+  text-decoration: none;
+}
+
 .hiddenText{
   display:none;
 }
@@ -1707,7 +1711,7 @@ position: relative;
 
 .DashboardPageTable{
   width: 1100px;
-  margin-left: 20%;
+  margin-left: 10%;
  
  
 }
@@ -1760,6 +1764,146 @@ position: relative;
        width: auto;
     }
 }*/
+
+/* ========================== my orders ========================== */
+
+.myOrdersPagesBody{
+  background-color: rosybrown;
+  min-height: 483px;
+  padding-top: 10px;
+  padding-right: 90px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ========== */
 .pagesCartBody{
@@ -2490,7 +2634,7 @@ position: relative;
       display: block;
       position: fixed;
       height: 500px;
-    
+      
     }
 
     
@@ -2511,7 +2655,31 @@ position: relative;
     .sideNavComponentLinks{
       font-size: 50px;
       text-decoration: none;
+     
     }
+
+    /* ================ my orders media query ==================== */
+
+    .myOrdersPagesHeader{
+      display: none;
+    }
+
+    .myOrdersPages{
+      background-color: rosybrown;
+      width: 1570px
+    }
+    
+.myOrdersPagesBody{
+  background-color: rosybrown;
+  min-height: 483px;
+  padding-top: 50px;
+  padding-right: 90px;
+}
+
+.dashboardPageTableParent{
+  border: 2px solid transparent
+}
+
 
     
 }

@@ -5,6 +5,7 @@ import Link from "next/link"
 import {AiOutlineHome} from "react-icons/ai"
 import {MdOutlineRestaurantMenu} from "react-icons/md"
 import {AiOutlineShoppingCart} from "react-icons/ai"
+import {GrUserAdmin} from "react-icons/gr"
 import {GoSignIn} from "react-icons/go"
 import {useSession} from "next-auth/react"
 
@@ -76,7 +77,20 @@ function SideNa() {
 
 </NavItem>}
 
-     
+{session?.user.isAdmin && <NavItem eventKey="home" className={Styles.sideNavComponentNavItems}>
+
+<NavIcon>
+  
+  <Link className={Styles.sideNavComponentLinks} href="/Dashboard" ><GrUserAdmin size={40} /></Link>
+</NavIcon>
+
+<NavText >
+<Link className={Styles.sideNavComponentLinks} href="/Dashboard" >admin</Link>
+</NavText>
+
+</NavItem>}
+
+
 
     </SideNav.Nav>
 </SideNav>
