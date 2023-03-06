@@ -3,9 +3,10 @@ import Style from "../styles/Home.module.css"
 import TtDashboardComponent from '../components/TtDashboard'
 import Header from "../components/Header"
 import dynamic from 'next/dynamic'
-import {useSession} from "next-auth/react"
+import {useSession, signOut} from "next-auth/react"
 import Link from "next/link"
 import SideNa from '../components/SideNav'
+import { Sidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
 import ScrollTrigger from 'react-scroll-trigger'
 
 /*import mongoose from 'mongoose'
@@ -35,7 +36,22 @@ function TtDashboard() {
         <Header />
   </div>}
 
-{hide && <div><SideNa /></div>}
+{hide ? <div><SideNa /></div> : <div >
+               
+      <Sidebar className={Style.layoutHeaderSidebar}>
+  <Menu className={Style.layoutHeaderMenu}>
+    <SubMenu label={session.user.name} className={Style.layoutHeaderSubMenu}>
+    <MenuItem className={Style.layoutHeaderMenuItem}> <Link className={Style.layoutSidebarLink} href="/">home</Link> </MenuItem>
+      <MenuItem className={Style.layoutHeaderMenuItem}> <Link className={Style.layoutSidebarLink} href="/cart">cart</Link> </MenuItem>
+      <MenuItem className={Style.layoutHeaderMenuItem}> <Link className={Style.layoutSidebarLink} href="/myOrders">my orders</Link> </MenuItem>
+    <MenuItem className={Style.layoutHeaderMenuItem}> <Link className={Style.layoutSidebarLink} href="favourite">favourite</Link> </MenuItem>
+    <MenuItem className={Style.layoutHeaderMenuItem} onClick={(e) =>{ e.preventDefault() 
+                signOut()}}> logOut </MenuItem>
+    </SubMenu>
+  </Menu>
+</Sidebar> 
+
+</div>}
 
 
 <div>{hide ? "." : "."}</div>
