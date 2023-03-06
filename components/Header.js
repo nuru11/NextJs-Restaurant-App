@@ -55,7 +55,7 @@ function Header() {
     <SubMenu label={session.user.name} className={styles.layoutHeaderSubMenu}>
       <MenuItem className={styles.layoutHeaderMenuItem}> <Link className={styles.layoutHeaderMenuItemLink} href="/menu">menu</Link></MenuItem>
       <MenuItem className={styles.layoutHeaderMenuItem}> <Link className={styles.layoutHeaderMenuItemLink} href="/cart"> cart</Link> </MenuItem>
-    <MenuItem className={styles.layoutHeaderMenuItem}> <Link href="/favourite">favourite</Link> </MenuItem>
+    <MenuItem className={styles.layoutHeaderMenuItem}> <Link className={styles.layoutHeaderMenuItemLink} href="/favourite">favourite</Link> </MenuItem>
     {<MenuItem className={styles.layoutHeaderMenuItem}><Link className={styles.layoutHeaderMenuItemLink} href="/Dashboard">dashboard</Link></MenuItem>}
     <MenuItem className={styles.layoutHeaderMenuItem} onClick={(e) =>{ e.preventDefault() 
                 signOut()}}> logOut</MenuItem>

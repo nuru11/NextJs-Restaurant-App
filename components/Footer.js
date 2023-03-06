@@ -3,6 +3,8 @@ import Link from "next/link"
 import Style from "../styles/Home.module.css"
 
 const Footer = () => {
+
+ 
   return (
     <div className={Style.footer}>
 
@@ -34,6 +36,7 @@ const Footer = () => {
               <li>Email</li>
               <li>Phone</li>
               <li>message us</li>
+              <li><Link href="/Dashboard">old</Link></li>
             </ul>
           </div>
         </div>
@@ -48,6 +51,8 @@ const Footer = () => {
           <Link className={Style.footerAuthenticationLink} href="/login"><div className={Style.footerAuthenticationLogin}>Login</div></Link>
           <Link className={Style.footerAuthenticationLink} href="/signup"><div className={Style.footerAuthenticationSignup}>SignUp</div></Link>
           </div>
+
+         
     </div>
   )
 }

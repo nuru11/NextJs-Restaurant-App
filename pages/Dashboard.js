@@ -75,7 +75,7 @@ colspan="3"
 
 
 
-import React from 'react'
+import React, {useState} from 'react'
 import Style from "../styles/Home.module.css"
 import DashboardComponent from '../components/Dashboard'
 import Header from "../components/Header"
@@ -85,6 +85,8 @@ import {BsCartCheck} from "react-icons/bs"
 import {useSession, signOut} from "next-auth/react"
 import Link from "next/link"
 import SideNa from '../components/SideNav'
+import ScrollTrigger from 'react-scroll-trigger'
+
 //import styles from "../styles/Home.module.css"
 
 /*import mongoose from 'mongoose'
@@ -94,6 +96,7 @@ import db from "../utils/db"*/
 
 
 function Dashboard() {
+  const [hide, setHide] = useState(true)
 
   const {data: session, status} = useSession()
 
@@ -106,12 +109,23 @@ function Dashboard() {
     )
   }
 
+  
  
   return (
     <div className={Style.dashboardPage}>
         <div>
         <Header />
         </div>
+
+       
+
+
+<div>{hide ? "." : "."}</div>
+     
+ 
+ <ScrollTrigger onEnter={(() => setHide(true))} onExit={(() => setHide(false))}>
+    
+    </ScrollTrigger>
 
         <div className={Style.dashboardPageDropdownMediaQuery}>
               
@@ -120,7 +134,7 @@ function Dashboard() {
               ) : session?.user ? (
                 <div className={Style.layoutHeaderSidebarPlateDetailParentMediaQuery}>
                 
-                <div><SideNa /></div>
+                {hide && <div><SideNa /></div>}
 
                 <Sidebar className={Style.layoutHeaderSidebarMediaQuery}>
   <Menu className={Style.layoutHeaderMenu}>

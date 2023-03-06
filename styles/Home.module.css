@@ -109,6 +109,19 @@
 }
 
 
+
+/* ====================== testDashboard header ===================== */
+
+
+.dashboardTestPageHeader{
+  height: 70px;
+  background-color: rosybrown;
+}
+
+.testDashboardComponentSidena{
+  height: 50px;
+}
+
 /* =================== header media-query ==================== */
 /*
 @media (max-width: 767px){
@@ -1723,6 +1736,31 @@ position: relative;
   
   
 }
+
+.ttdashboardPage{
+  background-color: rosybrown;
+}
+
+
+
+
+.ttdashboardPageTableParent{
+  background-color: rosybrown;
+  padding-bottom: 20px;
+  padding-top: 30px;
+}
+
+
+
+.ttDashboardPageTable{
+  width: 1100px;
+  margin-left: 10%;
+ 
+ 
+}
+
+
+
 /*
 .dashboardComponent{
 position: relative;
@@ -2396,6 +2434,31 @@ position: relative;
 
 /* ====================== dashboard media query =============== */
 
+.ttDashboardHeader{
+  display: none
+}
+.ttdashboardPage{
+  min-width: 100%;
+  box-sizing: border-box;
+ 
+  background-color: white;
+}
+
+.ttdashboardPageBody{
+  margin-left: 30px;
+}
+
+.ttdashboardPageTableParent{
+  width: fit-content;
+  background-color: white;
+  margin-left: 0;
+}
+
+.ttDashboardPageTable{
+  width: fit-content;
+  margin-left: 0;
+}
+
 .dashboardPage{
   width: 1570px;
   height:3000px;
@@ -2419,7 +2482,7 @@ position: relative;
 
 .dashboardComponentNumber{
   height: 150px;
-  margin-left: 100px;
+  margin-left: 30px;
 }
 
 .dashboardComponentNumberTitle{
@@ -2448,6 +2511,7 @@ position: relative;
 
   height: 100px;
 }
+
 
 
 
@@ -2684,3 +2748,12 @@ position: relative;
     
 }
 
+
+
+@media (min-width: 768px) and (max-width: 992px){
+  .sideNavComponent{
+    display: block;
+    position: fixed;
+    height: 500px;
+  }
+}

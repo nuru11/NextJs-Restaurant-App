@@ -19,7 +19,9 @@ function Cart() {
  const router = useRouter()
 
  const checkouthandler = () => { 
+  if(addCart.length > 1){
   router.push("/checkout")
+  }
  }
  
  const total = addCart.reduce((acc, val) => acc += val.amount * val.price, 0)

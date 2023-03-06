@@ -10,7 +10,6 @@ import {GoSignIn} from "react-icons/go"
 import {useSession} from "next-auth/react"
 
 
-
 import React from 'react'
 
 
@@ -77,7 +76,7 @@ function SideNa() {
 
 </NavItem>}
 
-{session?.user.isAdmin && <NavItem eventKey="home" className={Styles.sideNavComponentNavItems}>
+{/*session?.user.isAdmin && <NavItem eventKey="home" className={Styles.sideNavComponentNavItems}>
 
 <NavIcon>
   
@@ -85,7 +84,21 @@ function SideNa() {
 </NavIcon>
 
 <NavText >
-<Link className={Styles.sideNavComponentLinks} href="/Dashboard" >admin</Link>
+<Link className={Styles.sideNavComponentLinks} href="/Dashboard" >old</Link>
+</NavText>
+
+  </NavItem>*/}
+
+
+{session?.user.isAdmin && <NavItem eventKey="home" className={Styles.sideNavComponentNavItems}>
+
+<NavIcon>
+  
+  <Link className={Styles.sideNavComponentLinks} href="/ttDashboard" ><GrUserAdmin size={40} /></Link>
+</NavIcon>
+
+<NavText >
+<Link className={Styles.sideNavComponentLinks} href="/ttDashboard" >admin</Link>
 </NavText>
 
 </NavItem>}

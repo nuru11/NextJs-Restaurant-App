@@ -10,8 +10,8 @@ function Checkout() {
   //const {data: session, status} = useSession()
   const route = useRouter()
 
-  const [name, setName] = useState()
-  const [email, setEmail] = useState("nuru@gmail.com")
+  const [name, setName] = useState("admin")
+  const [email, setEmail] = useState("admin@gmail.com")
   const [phone, setPhone] = useState("0966202667")
   const [address, setAddress] = useState("kolfe")
   const [time, setTime] = useState()

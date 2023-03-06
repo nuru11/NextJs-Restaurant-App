@@ -13,8 +13,9 @@ export default function Home() {
      <Layout title="Home Page">
      <BackgroundImg />
     {/* <PopularPlate />*/}
-     <PopularFood />
+    
      <About />
+     <PopularFood />
      <Review />
      </Layout>
      </div>
