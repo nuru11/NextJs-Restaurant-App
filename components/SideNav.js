@@ -13,7 +13,6 @@ import {useSession} from "next-auth/react"
 import React from 'react'
 
 
-
 function SideNa() {
     const { data: session} = useSession()
 
@@ -94,12 +93,13 @@ function SideNa() {
 
 <NavIcon>
   
-  <Link className={Styles.sideNavComponentLinks} href="/ttDashboard" ><GrUserAdmin size={40} /></Link>
+  <Link className={Styles.sideNavComponentLinks} href="/Dashboard" ><GrUserAdmin size={40} /></Link>
 </NavIcon>
 
 <NavText >
-<Link className={Styles.sideNavComponentLinks} href="/ttDashboard" >admin</Link>
+<Link className={Styles.sideNavComponentLinks} href="/Dashboard" >admin</Link>
 </NavText>
+
 
 </NavItem>}
 

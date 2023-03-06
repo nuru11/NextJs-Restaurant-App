@@ -65,7 +65,7 @@ export default function Layout({ title, children }) {
     <SubMenu label={session.user.name} className={styles.layoutHeaderSubMenu}>
       <MenuItem className={styles.layoutHeaderMenuItem}> <Link className={styles.layoutSidebarLink} href="/cart">cart</Link> </MenuItem>
       <MenuItem className={styles.layoutHeaderMenuItem}> <Link className={styles.layoutSidebarLink} href="/myOrders">my orders</Link> </MenuItem>
-      {session.user.isAdmin &&<MenuItem className={styles.layoutHeaderMenuItem}> <Link className={styles.layoutSidebarLink} href="/ttDashboard">dashboard</Link> </MenuItem>}
+      {session.user.isAdmin &&<MenuItem className={styles.layoutHeaderMenuItem}> <Link className={styles.layoutSidebarLink} href="/Dashboard">dashboard</Link> </MenuItem>}
     <MenuItem className={styles.layoutHeaderMenuItem}> <Link className={styles.layoutSidebarLink} href="favourite">favourite</Link> </MenuItem>
     <MenuItem className={styles.layoutHeaderMenuItem} onClick={(e) =>{ e.preventDefault() 
                 signOut()}}> logOut </MenuItem>
