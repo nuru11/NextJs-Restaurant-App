@@ -36,7 +36,6 @@ const Footer = () => {
               <li>Email</li>
               <li>Phone</li>
               <li>message us</li>
-              <li><Link href="/ttDashboard">old</Link></li>
             </ul>
           </div>
         </div>
