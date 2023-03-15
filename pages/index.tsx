@@ -6,12 +6,13 @@ import PopularFood from "../components/Popular-food"
 import About from "../components/About"
 import Style from "../styles/Home.module.css"
 
+
 export default function Home() {
   return ( 
     
     <div className={Style.home}>
      <Layout title="Home Page">
-     <BackgroundImg />
+     <BackgroundImg title="background" />
     {/* <PopularPlate />*/}
     
      <About />
