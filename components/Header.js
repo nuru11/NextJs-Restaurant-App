@@ -13,8 +13,9 @@ function Header() {
 
   
   return (
+    
     <div className={styles.independentHeader}> 
-
+jj
         <nav>
           
           <div className={styles.headerItemParent}>

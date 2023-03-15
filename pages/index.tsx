@@ -12,7 +12,7 @@ export default function Home() {
     
     <div className={Style.home}>
      <Layout title="Home Page">
-     <BackgroundImg title="background" />
+     <BackgroundImg />
     {/* <PopularPlate />*/}
     
      <About />
