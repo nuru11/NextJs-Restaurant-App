@@ -15,7 +15,7 @@ function Review() {
    
     <div className={Styles.Review}>
      
-        <p className={Styles.ReviewTitle}>About Our Restaurant</p>
+        <p className={Styles.ReviewTitle} data-testid="ReviewTitle">About Our Restaurant</p>
 
         <div className={Styles.ReviewItemsParent}>
 

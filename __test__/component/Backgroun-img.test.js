@@ -6,14 +6,19 @@ import '@testing-library/jest-dom';
 
 
 describe("background-img", () => {
-    render(<BackgroundImg />)
-    it("display text", () => {
-        const displayText = screen.getByText("Life is short, make it sweet")
-        expect(displayText).toBeInTheDocument()
-    })
+   
+    
 
+  
     it("display correctlly", () => {
+        render(<BackgroundImg />)
         const element = screen.getByTestId('custom-element')
         expect(element).toBeInTheDocument()
+    })
+
+    it("display text", () => {
+        render(<BackgroundImg />)
+        const textDisplay = screen.getByText('Life is short, make it sweet')
+        expect(textDisplay).toBeInTheDocument()
     })
 })

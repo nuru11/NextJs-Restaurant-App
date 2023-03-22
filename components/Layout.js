@@ -74,7 +74,7 @@ export default function Layout({ title, children }) {
 </Sidebar> 
 
 </div> ) : (
-               <div className={styles.layoutHeaderAuthentication}>
+               <div className={styles.layoutHeaderAuthentication}>//
               <Link href="/Login" className={styles.layoutLoginLink}>
               <diva >login</diva>
               </Link>
@@ -195,3 +195,10 @@ export default function Layout({ title, children }) {
      </div>
 
      */
+
+
+
+
+
+
+     

@@ -11,7 +11,8 @@ export default function Home() {
   return ( 
     
     <div className={Style.home}>
-     <Layout title="Home Page">
+    
+     <Layout title="home">
      <BackgroundImg />
     {/* <PopularPlate />*/}
     

@@ -69,7 +69,7 @@ function PopularFood() {
         </div>
            <ToastContainer className={Styles.toastContainer} />
 
-        </div>
+        </div> 
     </div>
   )
 }
